@@ -1,0 +1,8 @@
+1. backend run command and front end run command are same
+npm start
+
+2. backend -> Server.js allowed orgins-> add the link of frontend localhost
+
+3. You can check the backend json on localhost:8000
+
+4. Mongodb Atlas -> Database -> Clusters -> Browse Collections
