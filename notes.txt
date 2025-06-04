@@ -10,3 +10,5 @@ npm start
 
 fronend url : https://priyabaski5.github.io/Todo-Fullstack1/
 backend url : https://todo-fullstack1-backend.onrender.com
+
+render refresh and make it live if doesn't wrk and the mongodb cluster
