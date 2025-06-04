@@ -1,15 +1,15 @@
-//To get acccess from the backend and retrieve data we use  axios
+// To get access from the backend and retrieve data we use axios
 
 import axios from 'axios'
 
-const baseURL = "http://localhost:8000"
+// ✅ Change this to your Render backend URL
+const baseURL = "https://todo-fullstack1-backend.onrender.com"
 
-const getAllTodo = (setTodo) =>
-{
+const getAllTodo = (setTodo) => {
     axios
     .get(`${baseURL}`)
     .then(({data}) => {
-        console.log('data => ',data);
+        console.log('data => ', data);
         setTodo(data)
     })
     .catch((err) => console.log(err))
@@ -17,8 +17,8 @@ const getAllTodo = (setTodo) =>
 
 const addTodo = (text, setText, setTodo) => {
     axios
-    .post(`${baseURL}/save`, {text})
-    .then((data)=>{
+    .post(`${baseURL}/save`, { text })
+    .then((data) => {
         console.log(data)
         setText("")
         getAllTodo(setTodo)
@@ -28,8 +28,8 @@ const addTodo = (text, setText, setTodo) => {
 
 const updateTodo = (todoId, text, setText, setTodo, setUpdate) => {
     axios
-    .post(`${baseURL}/update`, { _id : todoId,text})
-    .then((data)=>{
+    .post(`${baseURL}/update`, { _id: todoId, text })
+    .then((data) => {
         setText("")
         setUpdate(false)
         getAllTodo(setTodo)
@@ -38,11 +38,12 @@ const updateTodo = (todoId, text, setText, setTodo, setUpdate) => {
 }
 
 const deleteTodo = (_id, setTodo) => {
-    axios.post(`${baseURL}/delete`, {_id})
-    .then((data)=> {
+    axios
+    .post(`${baseURL}/delete`, { _id })
+    .then((data) => {
         getAllTodo(setTodo)
     })
     .catch((err) => console.log(err))
 }
 
-export {getAllTodo, addTodo, updateTodo, deleteTodo}
+export { getAllTodo, addTodo, updateTodo, deleteTodo }
