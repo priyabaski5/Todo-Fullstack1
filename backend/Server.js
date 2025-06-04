@@ -8,9 +8,12 @@ const app = express();
 const PORT = process.env.PORT || 8000;
 
 app.use(express.json());
+
 const allowedOrigins = [
-    'https://ornate-monstera-538874.netlify.app',
-    'http://localhost:3000' ];
+    'https://priyabaski5.github.io',
+    'http://localhost:3000'
+];
+
 app.use(cors({
     origin: allowedOrigins
 }));
