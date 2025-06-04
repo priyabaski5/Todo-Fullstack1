@@ -6,3 +6,7 @@ npm start
 3. You can check the backend json on localhost:8000
 
 4. Mongodb Atlas -> Database -> Clusters -> Browse Collections
+
+
+fronend url : https://priyabaski5.github.io/Todo-Fullstack1/
+backend url : https://todo-fullstack1-backend.onrender.com
